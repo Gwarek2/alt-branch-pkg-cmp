@@ -1,32 +1,21 @@
 import requests
 from collections import defaultdict
+from dataclasses import dataclass, asdict
 from packaging import version
 from typing import Optional
 from urllib.parse import urljoin
 
 
+@dataclass
 class Package:
-    def __init__(self, *args, **kwargs):
-        self.name = kwargs.get("name", "")
-        self.epoch = kwargs.get("epoch", "")
-        self.version = kwargs.get("version", "")
-        self.release = kwargs.get("release", "")
-        self.arch = kwargs.get("arch", "")
-        self.disttag = kwargs.get("disttag", "")
-        self.buildtime = kwargs.get("buildtime", "")
-        self.source = kwargs.get("source", "")
-
-    def serialize(self):
-        return {
-            "name": self.name,
-            "epoch": self.epoch,
-            "version": self.version,
-            "release": self.release,
-            "arch": self.arch,
-            "disttag": self.disttag,
-            "buildtime": self.buildtime,
-            "source": self.source
-            }
+    name: str
+    epoch: str
+    version: str
+    release: str
+    arch: str
+    disttag: str
+    buildtime: str
+    source: str
 
 
 class PackageSet:
@@ -45,7 +34,7 @@ class PackageSet:
         for arch, pkgs1 in self.packages.items():
             for name, pkg in pkgs1.items():
                 if not pkgset.packages.get(arch, {}).get(name):
-                    result[arch].append(pkg.serialize())
+                    result[arch].append(asdict(pkg))
         return dict(result)
 
     def newer_than(self, pkgset: "PackageSet") -> dict:
@@ -55,7 +44,7 @@ class PackageSet:
             for name, pkg1 in pkgs1.items():
                 pkg2 = pkgset.packages.get(arch, {}).get(name)
                 if pkg2 and version.parse(pkg1.version) > version.parse(pkg2.version):
-                    result[arch].append(pkg1.serialize())
+                    result[arch].append(asdict(pkg1))
         return dict(result)
 
     def _validate_pkgset(self, pkgset) -> None:

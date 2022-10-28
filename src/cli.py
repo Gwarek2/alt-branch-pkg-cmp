@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import argparse
 import json
 from pkgset import get_branch_bin_pkgs, create_pkgsets
