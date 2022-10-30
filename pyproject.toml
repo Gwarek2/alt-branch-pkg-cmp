@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alt-branch-pkg-cmp"
+description = "Cli tool for comparing packages from ALT Linux branches."
+readme = "README.md"
+requires-python = ">=3.8"
+version = "0.1"
+dependencies = [
+    "requests==2.28.1",
+    "packaging==21.3",
+    'importlib-metadata; python_version<"3.8"',
+]
+
+[project.scripts]
+alt-branch-pkg-cmp = "cli:run"

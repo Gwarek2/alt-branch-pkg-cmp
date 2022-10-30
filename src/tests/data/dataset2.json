@@ -1,0 +1,76 @@
+{
+  "branch": "p10",
+  "packages": [
+    {
+        "name": "glfw",
+        "epoch": "0",
+        "version": "12.3",
+        "release": "alt1",
+        "arch": "aarch64",
+        "disttag": "sisyphus+308484.100.2.1",
+        "buildtime": "1666007570",
+        "source": "Cardinal"
+    },
+    {
+      "name": "glfw",
+      "epoch": "0",
+      "version": "19.25",
+      "release": "alt1",
+      "arch": "x86_64",
+      "disttag": "sisyphus+308484.100.2.1",
+      "buildtime": "1666007570",
+      "source": "Cardinal"
+    },
+    {
+        "name": "gstreamer",
+        "epoch": "0",
+        "version": "1.0",
+        "release": "alt3",
+        "arch": "aarch64",
+        "disttag": "sisyphus+285941.100.1.1",
+        "buildtime": "1632590124",
+        "source": "gstreamer"
+    },
+    {
+        "name": "vim",
+        "epoch": "0",
+        "version": "7.0",
+        "release": "alt3",
+        "arch": "x86_64",
+        "disttag": "sisyphus+285941.100.1.1",
+        "buildtime": "1632590124",
+        "source": "vim"
+    },
+    {
+        "name": "gstreamer",
+        "epoch": "0",
+        "version": "1.0",
+        "release": "alt1",
+        "arch": "x86_64",
+        "disttag": "sisyphus+308972.200.2.1",
+        "buildtime": "1666700633",
+        "source": "gstreamer"
+    },
+    {
+        "name": "pulseaudio",
+        "epoch": "0",
+        "version": "4.2.8",
+        "release": "alt1",
+        "arch": "x86_64",
+        "disttag": "sisyphus+299804.100.1.2",
+        "buildtime": "1652288374",
+        "source": "pulseaudio"
+    },
+    {
+        "name": "gtk3-dev",
+        "epoch": "0",
+        "version": "3.9",
+        "release": "alt1",
+        "arch": "x86_64",
+        "disttag": "sisyphus+306841.100.1.2",
+        "buildtime": "1663265672",
+        "source": "gkt3"
+    }
+  ]
+}
+
