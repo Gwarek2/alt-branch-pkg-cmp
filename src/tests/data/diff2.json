@@ -1,0 +1,26 @@
+{
+  "aarch64": [
+    {
+      "name": "gstreamer",
+      "epoch": "0",
+      "version": "1.0",
+      "release": "alt3",
+      "arch": "aarch64",
+      "disttag": "sisyphus+285941.100.1.1",
+      "buildtime": "1632590124",
+      "source": "gstreamer"
+    }
+  ],
+  "x86_64": [
+    {
+      "name": "pulseaudio",
+      "epoch": "0",
+      "version": "4.2.8",
+      "release": "alt1",
+      "arch": "x86_64",
+      "disttag": "sisyphus+299804.100.1.2",
+      "buildtime": "1652288374",
+      "source": "pulseaudio"
+    }
+  ]
+}

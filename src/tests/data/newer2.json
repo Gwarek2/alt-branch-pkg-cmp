@@ -1,0 +1,24 @@
+{
+  "x86_64": [
+    {
+      "name": "glfw",
+      "epoch": "0",
+      "version": "19.25",
+      "release": "alt1",
+      "arch": "x86_64",
+      "disttag": "sisyphus+308484.100.2.1",
+      "buildtime": "1666007570",
+      "source": "Cardinal"
+    },
+    {
+      "name": "gtk3-dev",
+      "epoch": "0",
+      "version": "3.9",
+      "release": "alt1",
+      "arch": "x86_64",
+      "disttag": "sisyphus+306841.100.1.2",
+      "buildtime": "1663265672",
+      "source": "gkt3"
+    }
+  ]
+}
