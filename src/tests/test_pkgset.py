@@ -26,15 +26,15 @@ class TestPackageSet(unittest.TestCase):
 
     def test_adding_packages(self):
         package = Package(
-                name="gpg",
-                epoch="0",
-                version="2.1.7",
-                release="atl1",
-                arch="x86_64",
-                disttag="sisyphus",
-                buildtime="123432324",
-                source="Cardinal"                
-                )
+            name="gpg",
+            epoch="0",
+            version="2.1.7",
+            release="atl1",
+            arch="x86_64",
+            disttag="sisyphus",
+            buildtime="123432324",
+            source="Cardinal",
+        )
         self.pkgset1.add(package)
         self.pkgset2.add(package)
         self.assertEqual(package, self.pkgset1.packages["x86_64"]["gpg"])

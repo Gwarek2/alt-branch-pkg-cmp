@@ -52,7 +52,7 @@ class PackageSet:
             raise TypeError(f"{pkgset} is not an instance of {PackageSet}")
 
     def __repr__(self):
-        output = {} 
+        output = {}
         for arch, pkgs in self.packages.items():
             output[arch] = [pkg for pkg in pkgs.values()]
         return str(output)
@@ -66,15 +66,16 @@ def get_branch_bin_pkgs(branch: str) -> dict:
     response = requests.get(url_path)
     if response.status_code // 100 == 2:
         return response.json()
-    print(f"Failed to retrive branch '{branch}' package lists. "
-          f"Http error: {response.status_code}")
+    print(
+        f"Failed to retrive branch '{branch}' package lists. "
+        f"Http error: {response.status_code}"
+    )
     return {}
 
 
 def create_pkgsets(pkgs: list[dict], branch: str) -> PackageSet:
     result = PackageSet(branch)
     for pkg_data in pkgs:
-        pkg = Package(**pkg_data) 
+        pkg = Package(**pkg_data)
         result.add(pkg)
     return result
-
