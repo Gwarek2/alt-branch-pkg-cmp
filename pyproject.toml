@@ -9,8 +9,8 @@ readme = "README.md"
 requires-python = ">=3.8"
 version = "0.1"
 dependencies = [
-    "requests",
-    "packaging",
+    "requests==2.28.1",
+    "packaging==21.3",
     'importlib-metadata; python_version<"3.8"',
 ]
 
